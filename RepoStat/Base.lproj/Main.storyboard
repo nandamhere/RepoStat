@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hOZ-mb-GHq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17701"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,13 +16,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="i9Q-fj-WiY">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="120" id="i9Q-fj-WiY" customClass="CommitDetailsTableViewCell" customModule="RepoStat" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i9Q-fj-WiY" id="tD0-pB-x1b">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g82-fw-17l">
+                                            <rect key="frame" x="21" y="13" width="373" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commit hash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msA-sE-d8S">
+                                            <rect key="frame" x="21" y="36" width="373" height="48"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ZQ-OE-bWn">
+                                            <rect key="frame" x="21" y="86" width="373" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="msA-sE-d8S" firstAttribute="leading" secondItem="g82-fw-17l" secondAttribute="leading" id="0dz-GD-Ntx"/>
+                                        <constraint firstItem="7ZQ-OE-bWn" firstAttribute="leading" secondItem="g82-fw-17l" secondAttribute="leading" id="RgY-X9-fmd"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="7ZQ-OE-bWn" secondAttribute="bottom" constant="2" id="e0T-Gb-RHe"/>
+                                        <constraint firstItem="7ZQ-OE-bWn" firstAttribute="trailing" secondItem="g82-fw-17l" secondAttribute="trailing" id="eGs-Rf-LKq"/>
+                                        <constraint firstItem="7ZQ-OE-bWn" firstAttribute="top" secondItem="msA-sE-d8S" secondAttribute="bottom" constant="2" id="gPC-98-yYb"/>
+                                        <constraint firstItem="g82-fw-17l" firstAttribute="top" secondItem="tD0-pB-x1b" secondAttribute="topMargin" constant="2" id="i2c-wm-AKQ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="g82-fw-17l" secondAttribute="trailing" id="ktU-oO-AVn"/>
+                                        <constraint firstItem="msA-sE-d8S" firstAttribute="top" secondItem="g82-fw-17l" secondAttribute="bottom" constant="2" id="maH-Mj-Wjk"/>
+                                        <constraint firstItem="g82-fw-17l" firstAttribute="leading" secondItem="tD0-pB-x1b" secondAttribute="leadingMargin" constant="1" id="o68-hp-IgP"/>
+                                        <constraint firstItem="msA-sE-d8S" firstAttribute="trailing" secondItem="g82-fw-17l" secondAttribute="trailing" id="r8P-k8-iYN"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="author" destination="g82-fw-17l" id="u6E-PB-v0o"/>
+                                    <outlet property="commitHash" destination="msA-sE-d8S" id="KsP-mW-Zqk"/>
+                                    <outlet property="message" destination="7ZQ-OE-bWn" id="3Ud-0V-VUm"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -33,7 +70,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q1y-dc-4wY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="139"/>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
     <resources>
