@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		85AABED22627DFCE008089A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AABED12627DFCE008089A3 /* AppDelegate.swift */; };
 		85AABED42627DFCE008089A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AABED32627DFCE008089A3 /* SceneDelegate.swift */; };
-		85AABED62627DFCE008089A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AABED52627DFCE008089A3 /* ViewController.swift */; };
+		85AABED62627DFCE008089A3 /* CommitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AABED52627DFCE008089A3 /* CommitTableViewController.swift */; };
 		85AABED92627DFCE008089A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85AABED72627DFCE008089A3 /* Main.storyboard */; };
 		85AABEDB2627DFD0008089A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85AABEDA2627DFD0008089A3 /* Assets.xcassets */; };
 		85AABEDE2627DFD0008089A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85AABEDC2627DFD0008089A3 /* LaunchScreen.storyboard */; };
 		85AABEE92627DFD0008089A3 /* RepoStatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AABEE82627DFD0008089A3 /* RepoStatTests.swift */; };
 		85AABEF42627DFD0008089A3 /* RepoStatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AABEF32627DFD0008089A3 /* RepoStatUITests.swift */; };
+		85AABF1426289D44008089A3 /* CommitDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AABF1326289D44008089A3 /* CommitDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,7 @@
 		85AABECE2627DFCE008089A3 /* RepoStat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepoStat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85AABED12627DFCE008089A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85AABED32627DFCE008089A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		85AABED52627DFCE008089A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		85AABED52627DFCE008089A3 /* CommitTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitTableViewController.swift; sourceTree = "<group>"; };
 		85AABED82627DFCE008089A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85AABEDA2627DFD0008089A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85AABEDD2627DFD0008089A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		85AABEEF2627DFD0008089A3 /* RepoStatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepoStatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85AABEF32627DFD0008089A3 /* RepoStatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoStatUITests.swift; sourceTree = "<group>"; };
 		85AABEF52627DFD0008089A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85AABF1326289D44008089A3 /* CommitDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +103,12 @@
 			children = (
 				85AABED12627DFCE008089A3 /* AppDelegate.swift */,
 				85AABED32627DFCE008089A3 /* SceneDelegate.swift */,
-				85AABED52627DFCE008089A3 /* ViewController.swift */,
+				85AABED52627DFCE008089A3 /* CommitTableViewController.swift */,
 				85AABED72627DFCE008089A3 /* Main.storyboard */,
 				85AABEDA2627DFD0008089A3 /* Assets.xcassets */,
 				85AABEDC2627DFD0008089A3 /* LaunchScreen.storyboard */,
 				85AABEDF2627DFD0008089A3 /* Info.plist */,
+				85AABF1326289D44008089A3 /* CommitDetail.swift */,
 			);
 			path = RepoStat;
 			sourceTree = "<group>";
@@ -258,7 +261,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85AABED62627DFCE008089A3 /* ViewController.swift in Sources */,
+				85AABF1426289D44008089A3 /* CommitDetail.swift in Sources */,
+				85AABED62627DFCE008089A3 /* CommitTableViewController.swift in Sources */,
 				85AABED22627DFCE008089A3 /* AppDelegate.swift in Sources */,
 				85AABED42627DFCE008089A3 /* SceneDelegate.swift in Sources */,
 			);
