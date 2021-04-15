@@ -17,6 +17,7 @@
 		85AABEF42627DFD0008089A3 /* RepoStatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AABEF32627DFD0008089A3 /* RepoStatUITests.swift */; };
 		85AABF1426289D44008089A3 /* CommitDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AABF1326289D44008089A3 /* CommitDetail.swift */; };
 		85AABF222628A62A008089A3 /* CommitDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AABF212628A62A008089A3 /* CommitDetailsTableViewCell.swift */; };
+		85AABF272628AE28008089A3 /* CommitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AABF262628AE28008089A3 /* CommitViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		85AABEF52627DFD0008089A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85AABF1326289D44008089A3 /* CommitDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitDetail.swift; sourceTree = "<group>"; };
 		85AABF212628A62A008089A3 /* CommitDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		85AABF262628AE28008089A3 /* CommitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				85AABED12627DFCE008089A3 /* AppDelegate.swift */,
 				85AABED32627DFCE008089A3 /* SceneDelegate.swift */,
 				85AABED52627DFCE008089A3 /* CommitTableViewController.swift */,
+				85AABF262628AE28008089A3 /* CommitViewModel.swift */,
 				85AABED72627DFCE008089A3 /* Main.storyboard */,
 				85AABEDA2627DFD0008089A3 /* Assets.xcassets */,
 				85AABEDC2627DFD0008089A3 /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85AABF1426289D44008089A3 /* CommitDetail.swift in Sources */,
+				85AABF272628AE28008089A3 /* CommitViewModel.swift in Sources */,
 				85AABF222628A62A008089A3 /* CommitDetailsTableViewCell.swift in Sources */,
 				85AABED62627DFCE008089A3 /* CommitTableViewController.swift in Sources */,
 				85AABED22627DFCE008089A3 /* AppDelegate.swift in Sources */,
