@@ -9,7 +9,7 @@ import Foundation
 
 protocol FinishedFetching: class {
     func fetchSuccess(_ commitDetails: [CommitDetail])
-    func fetchFailed()
+    func fetchFailed(_ error: String)
 }
 struct CommitViewModel {
     
@@ -19,15 +19,11 @@ struct CommitViewModel {
         self.viewController = viewController
     }
     
-    let url = URL(string: "https://api.github.com/repos/nandamhere/RepoStat/commits")
+    let url = URL(string: "https://api.github.com/repos/nandamhere/RepoStat/commts")
     
     func fetchCommits() {
         if let url = url {
-            var request = URLRequest(url: url)
-            request.addValue("Bearer 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", forHTTPHeaderField: "Authorization")
-            request.addValue("_octo=GH1.1.32422612.1618456475; logged_in=no", forHTTPHeaderField: "Cookie")
-            request.httpMethod = "GET"
-            
+            let request = URLRequest(url: url)
             let task = URLSession(configuration: .default).dataTask(with: request) { (data, urlResponse, error) in
                 self.handleData(data: data, urlResponse: urlResponse, error: error)
             }
@@ -39,7 +35,7 @@ struct CommitViewModel {
     func handleData(data: Data?, urlResponse: URLResponse?, error: Error?) {
         if error != nil {
             print(error as Any)
-            viewController?.fetchFailed()
+            viewController?.fetchFailed("Failed to fetch")
             return
         }
         
@@ -51,7 +47,7 @@ struct CommitViewModel {
                 let decodedJsonData = try decoder.decode([CommitDetail].self, from: data)
                 viewController?.fetchSuccess(decodedJsonData)
             } catch {
-                print("Failed Decoding")
+                viewController?.fetchFailed("Decoding Failed")
             }
             
         }

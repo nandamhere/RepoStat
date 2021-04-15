@@ -24,19 +24,18 @@ class CommitTableViewController: UITableViewController, FinishedFetching {
         }
     }
     
-    func fetchFailed() {
-        let alert = UIAlertController(title: "Failed", message: "Failed to fetch Commits", preferredStyle: .alert)
-        alert.present(self, animated: true, completion: nil)
+    func fetchFailed(_ error: String) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Failed", message: error, preferredStyle: .alert)
+            alert.present(self, animated: true, completion: nil)
+        }
     }
     
-    
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return commitDetails.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // commitDetailsCell
         let cell = tableView.dequeueReusableCell(withIdentifier: "commitDetailsCell", for: indexPath) as? CommitDetailsTableViewCell
         cell?.author.text = commitDetails[indexPath.row].commit.author.name
         cell?.commitHash.text = commitDetails[indexPath.row].commitHash
@@ -45,4 +44,3 @@ class CommitTableViewController: UITableViewController, FinishedFetching {
         return cell ?? UITableViewCell()
     }
 }
-
