@@ -39,6 +39,7 @@ struct CommitViewModel {
     func handleData(data: Data?, urlResponse: URLResponse?, error: Error?) {
         if error != nil {
             print(error as Any)
+            viewController?.fetchFailed()
             return
         }
         
@@ -48,6 +49,7 @@ struct CommitViewModel {
             let decoder = JSONDecoder()
             do {
                 let decodedJsonData = try decoder.decode([CommitDetail].self, from: data)
+                viewController?.fetchSuccess(decodedJsonData)
             } catch {
                 print("Failed Decoding")
             }

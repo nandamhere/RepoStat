@@ -7,14 +7,29 @@
 
 import UIKit
 
-class CommitTableViewController: UITableViewController {
-    
+class CommitTableViewController: UITableViewController, FinishedFetching {
+   
+    private lazy var commitViewModel = CommitViewModel(viewController: self)
     var commitDetails: [CommitDetail] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        commitViewModel.fetchCommits()
     }
+    
+    func fetchSuccess(_ commitDetails: [CommitDetail]) {
+        self.commitDetails = commitDetails
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+    func fetchFailed() {
+        let alert = UIAlertController(title: "Failed", message: "Failed to fetch Commits", preferredStyle: .alert)
+        alert.present(self, animated: true, completion: nil)
+    }
+    
+    
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return commitDetails.count
