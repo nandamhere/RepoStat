@@ -19,7 +19,7 @@ struct CommitViewModel {
         self.viewController = viewController
     }
     
-    let url = URL(string: "https://api.github.com/repos/nandamhere/RepoStat/commts")
+    let url = URL(string: "https://api.github.com/repos/nandamhere/RepoStat/commits")
     
     func fetchCommits() {
         if let url = url {

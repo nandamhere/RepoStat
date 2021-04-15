@@ -18,6 +18,7 @@
 		85AABF1426289D44008089A3 /* CommitDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AABF1326289D44008089A3 /* CommitDetail.swift */; };
 		85AABF222628A62A008089A3 /* CommitDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AABF212628A62A008089A3 /* CommitDetailsTableViewCell.swift */; };
 		85AABF272628AE28008089A3 /* CommitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AABF262628AE28008089A3 /* CommitViewModel.swift */; };
+		DE64D0BDCB21D361D7108618 /* Pods_RepoStat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC445548025A5175F0201DB5 /* Pods_RepoStat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7ED75EC22F33A059DC8BC87D /* Pods-RepoStat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepoStat.release.xcconfig"; path = "Target Support Files/Pods-RepoStat/Pods-RepoStat.release.xcconfig"; sourceTree = "<group>"; };
 		85AABECE2627DFCE008089A3 /* RepoStat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepoStat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85AABED12627DFCE008089A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85AABED32627DFCE008089A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +57,8 @@
 		85AABF1326289D44008089A3 /* CommitDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitDetail.swift; sourceTree = "<group>"; };
 		85AABF212628A62A008089A3 /* CommitDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		85AABF262628AE28008089A3 /* CommitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitViewModel.swift; sourceTree = "<group>"; };
+		8779C8446E87565C2350E2B5 /* Pods-RepoStat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepoStat.debug.xcconfig"; path = "Target Support Files/Pods-RepoStat/Pods-RepoStat.debug.xcconfig"; sourceTree = "<group>"; };
+		FC445548025A5175F0201DB5 /* Pods_RepoStat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RepoStat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE64D0BDCB21D361D7108618 /* Pods_RepoStat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +87,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21B53F568700CDCAE2D5EF0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC445548025A5175F0201DB5 /* Pods_RepoStat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2A2BD7DF790D912C79471103 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8779C8446E87565C2350E2B5 /* Pods-RepoStat.debug.xcconfig */,
+				7ED75EC22F33A059DC8BC87D /* Pods-RepoStat.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		85AABEC52627DFCE008089A3 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +112,8 @@
 				85AABEE72627DFD0008089A3 /* RepoStatTests */,
 				85AABEF22627DFD0008089A3 /* RepoStatUITests */,
 				85AABECF2627DFCE008089A3 /* Products */,
+				2A2BD7DF790D912C79471103 /* Pods */,
+				21B53F568700CDCAE2D5EF0F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,9 +169,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85AABEF82627DFD0008089A3 /* Build configuration list for PBXNativeTarget "RepoStat" */;
 			buildPhases = (
+				4B33F61D3DB6A08E871C2D33 /* [CP] Check Pods Manifest.lock */,
 				85AABECA2627DFCE008089A3 /* Sources */,
 				85AABECB2627DFCE008089A3 /* Frameworks */,
 				85AABECC2627DFCE008089A3 /* Resources */,
+				F838F566AB51DE6F9BEB2154 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -261,6 +288,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B33F61D3DB6A08E871C2D33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RepoStat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F838F566AB51DE6F9BEB2154 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RepoStat/Pods-RepoStat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RepoStat/Pods-RepoStat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RepoStat/Pods-RepoStat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		85AABECA2627DFCE008089A3 /* Sources */ = {
@@ -445,6 +514,7 @@
 		};
 		85AABEF92627DFD0008089A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8779C8446E87565C2350E2B5 /* Pods-RepoStat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -464,6 +534,7 @@
 		};
 		85AABEFA2627DFD0008089A3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ED75EC22F33A059DC8BC87D /* Pods-RepoStat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
